@@ -1,0 +1,16 @@
+# python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.venv/
+venv/
+.env
+
+# logs & artifacts
+results/logs/
+artifacts/
+*.ckpt
+
+# datasets cache (optional)
+.cache/

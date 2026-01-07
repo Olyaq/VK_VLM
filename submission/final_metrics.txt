@@ -1,0 +1,5 @@
+final = artifacts/merged/final (merged/run_02)
+testdev sample: N=300, seed=42
+acc=0.4633 (139/300)
+yn_acc=0.6496
+other_acc=0.3443

@@ -1,0 +1,14 @@
+# Core
+torch>=2.1.0
+transformers>=4.38.0
+datasets>=2.18.0
+accelerate>=0.26.0
+peft>=0.8.0
+bitsandbytes>=0.42.0
+pillow>=10.0.0
+tqdm>=4.66.0
+pyyaml>=6.0.1
+
+# Optional (nice-to-have)
+evaluate>=0.4.0
+scikit-learn>=1.3.0

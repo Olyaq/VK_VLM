@@ -1,0 +1,40 @@
+run_name: run_02
+seed: 42
+model:
+  base_model_name: deepvk/llava-gemma-2b-lora
+  max_seq_len: 512
+  precision: fp32
+  quantization: none
+lora:
+  enabled: true
+  r: 16
+  alpha: 32
+  dropout: 0.05
+  target_modules:
+  - q_proj
+  - k_proj
+  - v_proj
+  - o_proj
+data:
+  dataset_config: train_balanced_instructions
+  train_dataset: deepvk/GQA-ru
+  train_split: train
+  val_ratio: 0.0
+  image_size: 256
+  prompt_template: llava_ru_v1
+  max_train_samples: 2000
+train:
+  epochs: 1
+  batch_size: 1
+  grad_accum: 2
+  lr: 0.0002
+  warmup_ratio: 0.03
+  weight_decay: 0.0
+  scheduler: cosine
+  max_grad_norm: 1.0
+  gradient_checkpointing: true
+  save_steps: 200
+  logging_steps: 10
+output:
+  adapters_dir: artifacts/adapters
+  logs_dir: results/logs
