@@ -20,3 +20,23 @@ This repository contains a small project for fine-tuning a vision-language model
 Train:
 ```bash
 TOKENIZERS_PARALLELISM=false bash scripts/train.sh
+
+## Reproducibility (final run_02)
+
+Base model: deepvk/llava-gemma-2b-lora  
+LoRA adapters: submission/lora_run_02/
+
+### MMBench-ru (dev@300)
+PYTHONPATH=. python -m src.eval_mmbench \
+  --base_model deepvk/llava-gemma-2b-lora \
+  --model submission/lora_run_02 \
+  --split dev --max_samples 300 --quant none
+
+### GQA-ru (testdev@300)
+PYTHONPATH=. python -m src.eval_gqa \
+  --base_model deepvk/llava-gemma-2b-lora \
+  --model submission/lora_run_02 \
+  --instr_config testdev_balanced_instructions \
+  --image_config testdev_balanced_images \
+  --split testdev --max_samples 300 --quant none \
+  --save_jsonl submission/gqa_testdev_pred_300.jsonl
