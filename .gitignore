@@ -14,3 +14,20 @@ artifacts/
 
 # datasets cache (optional)
 .cache/
+artifacts/merged/
+artifacts/adapters/
+*.pt
+*.bin
+*.safetensors
+*.tar.gz
+*.zip
+__pycache__/
+.venv/
+
+# big artifacts
+artifacts/
+submission.tar.gz
+*.safetensors
+*.bin
+*.pt
+*.pth
