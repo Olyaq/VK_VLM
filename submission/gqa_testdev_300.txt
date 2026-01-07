@@ -1,0 +1,2 @@
+GQA-ru split=testdev n=300 acc=0.4633 (139/300)
+Saved: submission/gqa_testdev_pred_300.jsonl

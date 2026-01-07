@@ -1,0 +1,1 @@
+MMBench-ru split=dev samples=300 used=300 acc=0.6067 (skipped=0)
