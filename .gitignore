@@ -31,3 +31,10 @@ submission.tar.gz
 *.bin
 *.pt
 *.pth
+# ignore heavy artifacts by default
+artifacts/
+
+# but keep final LoRA adapters
+!artifacts/adapters/
+!artifacts/adapters/run_02/
+!artifacts/adapters/run_02/**
